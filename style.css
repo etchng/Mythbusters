@@ -1,0 +1,235 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  color: white;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Roboto Slab', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 400;
+  text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+p .description {
+  margin-top: 2rem;
+}
+
+.cta {
+  padding: 1.5rem;
+  background: #D52B1E;
+  margin: 3rem 0;
+  border-radius: 5px;
+  width: 400px;
+  -webkit-animation: buttonGlow 3s ease 0s infinite normal none;
+          animation: buttonGlow 3s ease 0s infinite normal none;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  padding: 0 10rem;
+  background-image: url(treeBG.svg);
+  background-size: cover;
+}
+
+.column {
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+}
+
+.left {
+  width: 60vw;
+}
+
+.left-spacer {
+  height: 40vh;
+}
+
+.header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  font-family: sans-serif;
+}
+
+.lily-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+#tree-pulse {
+  -webkit-transform: scale(2.5) translate(0%, -25%);
+          transform: scale(2.5) translate(0%, -25%);
+  position: absolute;
+  z-index: 5;
+}
+
+#bg-layers {
+  position: absolute;
+  width: 100vw;
+  height: 150vh;
+  z-index: 1;
+}
+
+@-webkit-keyframes tree {
+  0.0% {
+    r: 0;
+    opacity: 1;
+  }
+  50.0% {
+    r: 600;
+    opacity: 0;
+  }
+  100.0% {
+    r: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes tree {
+  0.0% {
+    r: 0;
+    opacity: 1;
+  }
+  50.0% {
+    r: 600;
+    opacity: 0;
+  }
+  100.0% {
+    r: 0;
+    opacity: 0;
+  }
+}
+
+#pulse circle {
+  -webkit-animation: tree 3s ease 0s infinite normal none;
+          animation: tree 3s ease 0s infinite normal none;
+}
+
+@-webkit-keyframes treeGlow {
+  0.0% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 0px;
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+  }
+  50.0% {
+    -webkit-filter: drop-shadow(0px 0px 12px #4bb7ff);
+            filter: drop-shadow(0px 0px 12px #4bb7ff);
+  }
+  100% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 0px;
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+  }
+}
+
+@keyframes treeGlow {
+  0.0% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 0px;
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+  }
+  50.0% {
+    -webkit-filter: drop-shadow(0px 0px 12px #4bb7ff);
+            filter: drop-shadow(0px 0px 12px #4bb7ff);
+  }
+  100% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 0px;
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+  }
+}
+
+@-webkit-keyframes buttonGlow {
+  0.0% {
+    border: solid 0px #D52B1E;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
+  }
+  50.0% {
+    border: solid 4px #ffffff;
+    -webkit-box-shadow: 0px 0px 50px #e97c74;
+            box-shadow: 0px 0px 50px #e97c74;
+  }
+  100% {
+    border: solid 0px #D52B1E;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
+  }
+}
+
+@keyframes buttonGlow {
+  0.0% {
+    border: solid 0px #D52B1E;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
+  }
+  50.0% {
+    border: solid 4px #ffffff;
+    -webkit-box-shadow: 0px 0px 50px #e97c74;
+            box-shadow: 0px 0px 50px #e97c74;
+  }
+  100% {
+    border: solid 0px #D52B1E;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
+  }
+}
+
+/* Add the animation: property to whichever element you want to animate */
+#tree {
+  -webkit-animation: treeGlow 3s ease 0s infinite normal none;
+          animation: treeGlow 3s ease 0s infinite normal none;
+}
+/*# sourceMappingURL=style.css.map */
