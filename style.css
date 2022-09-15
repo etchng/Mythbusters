@@ -1,6 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +11,7 @@ body {
 
 h1 {
   font-size: 4rem;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
@@ -20,21 +19,21 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 h3 {
   font-size: 1.8rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 p {
   font-size: 1.5rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   font-weight: 400;
   text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
@@ -57,15 +56,9 @@ p {
 .wrapper {
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   display: flex;
   padding: 0 10rem;
   background-image: url(treeBG.svg);
@@ -82,20 +75,14 @@ p {
   width: 60vw;
   position: relative;
 }
-
 .left-wrap {
   position: absolute;
   bottom: 10rem;
 }
 
 .header-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: white;
   font-family: sans-serif;
 }
@@ -107,8 +94,7 @@ p {
 }
 
 #tree-pulse {
-  -webkit-transform: scale(2.5) translate(0%, -30%);
-          transform: scale(2.5) translate(0%, -30%);
+  transform: scale(2.5) translate(0%, -30%);
   position: absolute;
   z-index: 5;
 }
@@ -149,7 +135,6 @@ p {
     opacity: 0;
   }
 }
-
 #pulse circle {
   -webkit-animation: tree 3s ease 0s infinite normal none;
           animation: tree 3s ease 0s infinite normal none;
@@ -159,18 +144,15 @@ p {
   0.0% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
-            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
   50.0% {
-    -webkit-filter: drop-shadow(0px 0px 12px #4bb7ff);
-            filter: drop-shadow(0px 0px 12px #4bb7ff);
+    filter: drop-shadow(0px 0px 12px rgb(75, 183, 255));
   }
   100% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
-            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
 }
 
@@ -178,62 +160,49 @@ p {
   0.0% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
-            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
   50.0% {
-    -webkit-filter: drop-shadow(0px 0px 12px #4bb7ff);
-            filter: drop-shadow(0px 0px 12px #4bb7ff);
+    filter: drop-shadow(0px 0px 12px rgb(75, 183, 255));
   }
   100% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
-            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
 }
-
 @-webkit-keyframes buttonGlow {
   0.0% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    -webkit-box-shadow: 0px 0px 0px #e97c74;
-            box-shadow: 0px 0px 0px #e97c74;
+    box-shadow: 0px 0px 0px #e97c74;
   }
   50.0% {
     outline: 3px solid #fff;
     outline-offset: -3px;
-    -webkit-box-shadow: 0px 0px 50px #e97c74;
-            box-shadow: 0px 0px 50px #e97c74;
+    box-shadow: 0px 0px 50px #e97c74;
   }
   100% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    -webkit-box-shadow: 0px 0px 0px #e97c74;
-            box-shadow: 0px 0px 0px #e97c74;
+    box-shadow: 0px 0px 0px #e97c74;
   }
 }
-
 @keyframes buttonGlow {
   0.0% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    -webkit-box-shadow: 0px 0px 0px #e97c74;
-            box-shadow: 0px 0px 0px #e97c74;
+    box-shadow: 0px 0px 0px #e97c74;
   }
   50.0% {
     outline: 3px solid #fff;
     outline-offset: -3px;
-    -webkit-box-shadow: 0px 0px 50px #e97c74;
-            box-shadow: 0px 0px 50px #e97c74;
+    box-shadow: 0px 0px 50px #e97c74;
   }
   100% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    -webkit-box-shadow: 0px 0px 0px #e97c74;
-            box-shadow: 0px 0px 0px #e97c74;
+    box-shadow: 0px 0px 0px #e97c74;
   }
 }
-
 /* Add the animation: property to whichever element you want to animate */
 #tree {
   -webkit-animation: treeGlow 3s ease 0s infinite normal none;
           animation: treeGlow 3s ease 0s infinite normal none;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
