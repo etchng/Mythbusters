@@ -50,7 +50,7 @@ p {
   margin: 3rem 0;
   border-radius: 5px;
   width: 400px;
-  animation: buttonGlow 3s ease 0s infinite normal none;
+  animation: buttonGlow 9s ease 0s infinite normal none;
   display: flex;
   flex-direction: row;
 
@@ -146,10 +146,10 @@ p {
 
 //tree circle clipPath
 #pulse circle {
-  animation: tree 3s ease 0s infinite normal none;
+  animation: tree 9s ease 0s infinite normal none;
 }
 #tree {
-  animation: treeGlow 3s ease 0s infinite normal none;
+  animation: treeGlow 9s ease 0s infinite normal none;
 }
 
 //tree gradient animation
