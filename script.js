@@ -10,4 +10,4 @@ var intervalId = setInterval(function() {
   } else {
     i++;
   }
-}, 10000)
+}, 12000)
