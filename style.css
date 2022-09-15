@@ -164,11 +164,14 @@ p {
   z-index: 5;
 }
 
-#bg-layers {
-  position: absolute;
-  width: 100vw;
-  height: 150vh;
-  z-index: 1;
+#pulse circle {
+  -webkit-animation: tree 3s ease 0s infinite normal none;
+          animation: tree 3s ease 0s infinite normal none;
+}
+
+#tree {
+  -webkit-animation: treeGlow 3s ease 0s infinite normal none;
+          animation: treeGlow 3s ease 0s infinite normal none;
 }
 
 @-webkit-keyframes tree {
@@ -199,11 +202,6 @@ p {
     r: 0;
     opacity: 0;
   }
-}
-
-#pulse circle {
-  -webkit-animation: tree 3s ease 0s infinite normal none;
-          animation: tree 3s ease 0s infinite normal none;
 }
 
 @-webkit-keyframes treeGlow {
@@ -326,11 +324,5 @@ p {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
   }
-}
-
-/* Add the animation: property to whichever element you want to animate */
-#tree {
-  -webkit-animation: treeGlow 3s ease 0s infinite normal none;
-          animation: treeGlow 3s ease 0s infinite normal none;
 }
 /*# sourceMappingURL=style.css.map */

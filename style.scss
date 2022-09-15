@@ -1,13 +1,12 @@
 * {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   overflow: hidden;
   color: white;
-
 }
 
 h1 {
@@ -15,7 +14,8 @@ h1 {
   font-family: 'Roboto Slab', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);}
+  text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
+}
 h2 {
   font-size: 3.5rem;
   font-family: 'Roboto', sans-serif;
@@ -37,35 +37,33 @@ p {
 }
 
 .description {
-  margin:2rem 0 5rem 0;
+  margin: 2rem 0 5rem 0;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-
 }
 
 .cta {
   background-clip: padding-box; /* !importantÃƒÂ© */
 
   padding: 1.5rem;
-  background:#c83745;
+  background: #c83745;
   // background:#db7c00;
   margin: 3rem 0;
   border-radius: 5px;
-  width:400px;
+  width: 400px;
   animation: buttonGlow 3s ease 0s infinite normal none;
   display: flex;
   flex-direction: row;
 
-&-wrapper {
-  // justify-content: center;
-  // align-items: center;
-  margin: 0 auto;
- 
-  // text-align: center;
-  }
+  &-wrapper {
+    // justify-content: center;
+    // align-items: center;
+    margin: 0 auto;
 
+    // text-align: center;
+  }
 }
 
-.arrow{
+.arrow {
   margin: auto;
 }
 .wrapper {
@@ -80,47 +78,43 @@ p {
   background-size: cover;
 }
 
-
 .column {
-  width:50%;
+  width: 50%;
   height: 100%;
   z-index: 10;
-
 }
 
 .left {
-  width:60vw;
+  width: 60vw;
   position: relative;
   &-wrap {
     position: absolute;
-    bottom:10rem;
+    bottom: 10rem;
   }
 }
 .right {
-  width:40vw;
+  width: 40vw;
   position: relative;
-
 }
 
 .card {
-right:0;
-  height:30vh;
+  right: 0;
+  height: 30vh;
   width: 80%;
-  background:rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.15);
   position: absolute;
-  bottom:10rem;
+  bottom: 10rem;
   margin-bottom: 3rem;
   border-radius: 10px;
   // backdrop-filter: blur(7.5px);
   text-align: center;
   padding: 1.5rem;
-
 }
 
 .shuffle {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
-  color:rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
   padding: 1rem;
   &-body {
     margin: 1rem 2rem;
@@ -130,126 +124,120 @@ right:0;
   }
 }
 
-.header-wrap  {
+.header-wrap {
   display: flex;
   flex-direction: column;
-  color:white;
+  color: white;
   font-family: sans-serif;
 }
 
-
-
 .lily-logo {
-  width:150px;
+  width: 150px;
   height: auto;
   margin-bottom: 2rem;
 }
 
 #tree-pulse {
   transform: scale(2.5) translate(0%, -30%);
-  position:absolute;
+  position: absolute;
 
   z-index: 5;
 }
 
-#bg-layers {
-
-  position: absolute;
-  width: 100vw;
-  height: 150vh;
-  z-index: 1;
+//tree circle clipPath
+#pulse circle {
+  animation: tree 3s ease 0s infinite normal none;
+}
+#tree {
+  animation: treeGlow 3s ease 0s infinite normal none;
 }
 
-     @keyframes tree {
-      // from {r: 600} to {r: 5px}
+//tree gradient animation
 
-      0.0% {
-        r: 0;
-        opacity: 1;
-      }
-     50.0% {
-        r: 600;
-        opacity: 0;
-      }
-      100.0% {
-        r: 0;
-        opacity: 0;
-      }
-      }
-  
-        #pulse circle {
-        animation: tree 3s ease 0s infinite normal none;
-        }
+@keyframes tree {
+  0.0% {
+    r: 0;
+    opacity: 1;
+  }
+  50.0% {
+    r: 600;
+    opacity: 0;
+  }
+  100.0% {
+    r: 0;
+    opacity: 0;
+  }
+}
 
-        @keyframes treeGlow {
-          0.0%{
-            stroke: rgba(255, 255, 255, 0);
-            stroke-width: 0px;
-            filter: drop-shadow( 0px 0px 0px rgba(105, 195, 255, 0));
+// tree glow animation
+@keyframes treeGlow {
+  0.0% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 0px;
+    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
 
-            // box-shadow: 0px 0px 0px #48B5E7;
-          }
-        
-          50.0%{
-            // stroke: rgba(255, 255, 255, 1.0);
-            // stroke-width: 1px;
-            // box-shadow: 0px 0px 50px #9adfff;   
-            filter: drop-shadow( 0px 0px 12px rgb(75, 183, 255));
-      
-           }
-          100%{
-            stroke: rgba(255, 255, 255, 0);
-            stroke-width: 0px;
-            filter: drop-shadow( 0px 0px 0px rgba(105, 195, 255, 0));
+  }
 
-          }
-      }
-        @keyframes buttonGlow {
-          0%{
-            outline: 0px solid rgba(255, 255, 255, 0);
+  50.0% {
+    // stroke: rgba(255, 255, 255, 1.0);
+    // stroke-width: 1px;
+    // box-shadow: 0px 0px 50px #9adfff;
+    filter: drop-shadow(0px 0px 12px rgb(75, 183, 255));
+  }
+  100% {
+    stroke: rgba(255, 255, 255, 0);
+    stroke-width: 0px;
+    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+  }
+}
 
-        //  border: solid 0px #D52B1E;
-            box-shadow: 0px 0px 0px #e97c74;
-          }
-        
-          50%{
-            // border: solid 4px #ffffff;
-            outline: 3px solid #fff;
-            outline-offset: -3px;
+@keyframes buttonGlow {
+  0% {
+    outline: 0px solid rgba(255, 255, 255, 0);
 
-            box-shadow: 0px 0px 50px #e97c74;          }
-          100%{
-            // border: solid 0px #D52B1E;
-            outline: 0px solid rgba(255, 255, 255, 0);
+    //  border: solid 0px #D52B1E;
+    box-shadow: 0px 0px 0px #e97c74;
+  }
 
-            box-shadow: 0px 0px 0px #e97c74;
+  50% {
+    // border: solid 4px #ffffff;
+    outline: 3px solid #fff;
+    outline-offset: -3px;
 
-          }
-      }
-        @keyframes shuffleFade {
-          0%{
-           opacity: 0;
-           transform: translateY(10px);
-          }
-        
-          10%{
-            opacity: 1;
-            transform: translateY(0px);
-          }
-          90%{
-            opacity: 1;
-            transform: translateY(0px);
-          }
-          100%{
-            // border: solid 0px #D52B1E;
-            opacity: 0;
-           transform: translateY(10px);
+    box-shadow: 0px 0px 50px #e97c74;
+  }
+  100% {
+    // border: solid 0px #D52B1E;
+    outline: 0px solid rgba(255, 255, 255, 0);
 
-          }
-      }
-      
-      /* Add the animation: property to whichever element you want to animate */
-      #tree{
-          animation: treeGlow 3s ease 0s infinite normal none;
+    box-shadow: 0px 0px 0px #e97c74;
+  }
+}
+@keyframes shuffleFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
-      }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    // border: solid 0px #D52B1E;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+// #bg-layers {
+
+//   position: absolute;
+//   width: 100vw;
+//   height: 150vh;
+//   z-index: 1;
+// }
