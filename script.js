@@ -4,9 +4,7 @@ var intervalId = setInterval(function() {
   document.querySelector('.shuffle-body p').innerHTML = info[i];
   if (i == (info.length - 1)) {
     i = 0;
-    //you can even clear interval here to make heading stay as last one in array
-    //cleanInterval(intervalId);
-
+ 
   } else {
     i++;
   }
