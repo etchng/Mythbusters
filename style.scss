@@ -43,9 +43,10 @@ p {
 }
 
 .cta {
+  background-clip: padding-box; /* !importantÃƒÂ© */
 
   padding: 1.5rem;
-  background:#D52B1E;
+  background:#c83745;
   // background:#db7c00;
   margin: 3rem 0;
   border-radius: 5px;
@@ -95,7 +96,38 @@ p {
     bottom:10rem;
   }
 }
+.right {
+  width:40vw;
+  position: relative;
 
+}
+
+.card {
+right:0;
+  height:30vh;
+  width: 80%;
+  background:rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom:10rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  // backdrop-filter: blur(7.5px);
+  text-align: center;
+  padding: 1.5rem;
+
+}
+
+.shuffle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color:rgba(255, 255, 255, 0.75);
+  padding: 1rem;
+  &-body {
+    margin: 1rem 2rem;
+    text-align: left;
+    line-height: 2.5rem;
+  }
+}
 
 .header-wrap  {
   display: flex;
@@ -172,14 +204,14 @@ p {
           }
       }
         @keyframes buttonGlow {
-          0.0%{
+          0%{
             outline: 0px solid rgba(255, 255, 255, 0);
 
         //  border: solid 0px #D52B1E;
             box-shadow: 0px 0px 0px #e97c74;
           }
         
-          50.0%{
+          50%{
             // border: solid 4px #ffffff;
             outline: 3px solid #fff;
             outline-offset: -3px;
