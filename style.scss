@@ -34,18 +34,19 @@ p {
   font-family: 'Roboto', sans-serif;
   color: white;
   font-weight: 400;
-  text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .description {
   margin:2rem 0 5rem 0;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+
 }
 
 .cta {
 
   padding: 1.5rem;
   background:#D52B1E;
-  // background:rgb(255, 119, 0);
+  // background:#db7c00;
   margin: 3rem 0;
   border-radius: 5px;
   width:400px;
