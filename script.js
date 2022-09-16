@@ -9,3 +9,12 @@ var intervalId = setInterval(function() {
     i++;
   }
 }, 12000)
+
+let start= document.querySelector('.cta');
+
+start.addEventListener('click', function() {
+document.querySelector('.wrapper').classList.add('background2');
+document.querySelector('#tree-pulse').classList.add('fade-out');
+document.querySelector('.left').classList.add('text-fade');
+document.querySelector('.right').classList.add('text-fade');
+});

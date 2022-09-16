@@ -30,7 +30,7 @@ h3 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: 'Roboto', sans-serif;
   color: white;
   font-weight: 400;
@@ -42,7 +42,6 @@ p {
 }
 
 .cta {
-  background-clip: padding-box; /* !importantÃƒÂ© */
 
   padding: 1.5rem;
   background: #c83745;
@@ -53,6 +52,7 @@ p {
   animation: buttonGlow 9s ease 0s infinite normal none;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 
   &-wrapper {
     // justify-content: center;
@@ -61,6 +61,12 @@ p {
 
     // text-align: center;
   }
+}
+
+.quote {
+  font-size: 2.5rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
 }
 
 .arrow {
@@ -76,6 +82,30 @@ p {
   padding: 0 10rem;
   background-image: url(treeBG.svg);
   background-size: cover;
+  transition:  2s;
+}
+
+.background2 {
+  background-image: url(treeBG2.svg);
+  background-size: cover;
+
+  transition:  1.5s;
+  transition-delay: .7s;
+transition-property: background-image;
+}
+
+
+
+.text-fade {
+    transform: translateY(15px) !important;
+    opacity: 0;
+    transition:  0.5s;
+}
+
+.fade-out {
+  // transform: translateY(10px) !important;
+  opacity: 0;
+  transition:  1s;
 }
 
 .column {
@@ -89,7 +119,7 @@ p {
   position: relative;
   &-wrap {
     position: absolute;
-    bottom: 10rem;
+    bottom: 15vh;
   }
 }
 .right {
@@ -103,23 +133,25 @@ p {
   width: 80%;
   background: rgba(0, 0, 0, 0.15);
   position: absolute;
-  bottom: 10rem;
+  bottom: 15vh;
   margin-bottom: 3rem;
   border-radius: 10px;
   // backdrop-filter: blur(7.5px);
-  text-align: center;
-  padding: 1.5rem;
+  // text-align: center;
+  padding: 2.5rem;
 }
 
 .shuffle {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.75);
-  padding: 1rem;
+  padding: 1.5rem 0;
   &-body {
-    margin: 1rem 2rem;
+    padding: 1rem 2rem;
     text-align: left;
     line-height: 2.5rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+
     animation: shuffleFade 12s ease infinite;
   }
 }
@@ -138,7 +170,8 @@ p {
 }
 
 #tree-pulse {
-  transform: scale(2.5) translate(0%, -30%);
+  transform: scale(2.5) ;
+  top:-10%;
   position: absolute;
 
   z-index: 5;

@@ -1,6 +1,6 @@
-@charset "UTF-8";
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,7 @@ body {
 
 h1 {
   font-size: 4.5rem;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
@@ -20,21 +20,21 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-shadow: 5px 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 h3 {
   font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 p {
-  font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
   color: white;
   font-weight: 400;
 }
@@ -45,7 +45,6 @@ p {
 }
 
 .cta {
-  background-clip: padding-box; /* !importantÃƒÂ© */
   padding: 1.5rem;
   background: #c83745;
   margin: 3rem 0;
@@ -53,11 +52,24 @@ p {
   width: 400px;
   -webkit-animation: buttonGlow 9s ease 0s infinite normal none;
           animation: buttonGlow 9s ease 0s infinite normal none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
 }
+
 .cta-wrapper {
   margin: 0 auto;
+}
+
+.quote {
+  font-size: 2.5rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
 }
 
 .arrow {
@@ -67,13 +79,46 @@ p {
 .wrapper {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: flex;
   padding: 0 10rem;
   background-image: url(treeBG.svg);
   background-size: cover;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.background2 {
+  background-image: url(treeBG2.svg);
+  background-size: cover;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s;
+  -webkit-transition-property: background-image;
+  transition-property: background-image;
+}
+
+.text-fade {
+  -webkit-transform: translateY(15px) !important;
+          transform: translateY(15px) !important;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.fade-out {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .column {
@@ -86,9 +131,10 @@ p {
   width: 60vw;
   position: relative;
 }
+
 .left-wrap {
   position: absolute;
-  bottom: 10rem;
+  bottom: 15vh;
 }
 
 .right {
@@ -102,30 +148,36 @@ p {
   width: 80%;
   background: rgba(0, 0, 0, 0.15);
   position: absolute;
-  bottom: 10rem;
+  bottom: 15vh;
   margin-bottom: 3rem;
   border-radius: 10px;
-  text-align: center;
-  padding: 1.5rem;
+  padding: 2.5rem;
 }
 
 .shuffle {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.75);
-  padding: 1rem;
+  padding: 1.5rem 0;
 }
+
 .shuffle-body {
-  margin: 1rem 2rem;
+  padding: 1rem 2rem;
   text-align: left;
   line-height: 2.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.25);
   -webkit-animation: shuffleFade 12s ease infinite;
           animation: shuffleFade 12s ease infinite;
 }
 
 .header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
   font-family: sans-serif;
 }
@@ -137,7 +189,9 @@ p {
 }
 
 #tree-pulse {
-  transform: scale(2.5) translate(0%, -30%);
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
+  top: -10%;
   position: absolute;
   z-index: 5;
 }
@@ -181,99 +235,126 @@ p {
     opacity: 0;
   }
 }
+
 @-webkit-keyframes treeGlow {
   0.0% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
   50.0% {
-    filter: drop-shadow(0px 0px 12px rgb(75, 183, 255));
+    -webkit-filter: drop-shadow(0px 0px 12px #4bb7ff);
+            filter: drop-shadow(0px 0px 12px #4bb7ff);
   }
   100% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
 }
+
 @keyframes treeGlow {
   0.0% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
   50.0% {
-    filter: drop-shadow(0px 0px 12px rgb(75, 183, 255));
+    -webkit-filter: drop-shadow(0px 0px 12px #4bb7ff);
+            filter: drop-shadow(0px 0px 12px #4bb7ff);
   }
   100% {
     stroke: rgba(255, 255, 255, 0);
     stroke-width: 0px;
-    filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
+            filter: drop-shadow(0px 0px 0px rgba(105, 195, 255, 0));
   }
 }
+
 @-webkit-keyframes buttonGlow {
   0% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    box-shadow: 0px 0px 0px #e97c74;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
   }
   50% {
     outline: 3px solid #fff;
     outline-offset: -3px;
-    box-shadow: 0px 0px 50px #e97c74;
+    -webkit-box-shadow: 0px 0px 50px #e97c74;
+            box-shadow: 0px 0px 50px #e97c74;
   }
   100% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    box-shadow: 0px 0px 0px #e97c74;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
   }
 }
+
 @keyframes buttonGlow {
   0% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    box-shadow: 0px 0px 0px #e97c74;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
   }
   50% {
     outline: 3px solid #fff;
     outline-offset: -3px;
-    box-shadow: 0px 0px 50px #e97c74;
+    -webkit-box-shadow: 0px 0px 50px #e97c74;
+            box-shadow: 0px 0px 50px #e97c74;
   }
   100% {
     outline: 0px solid rgba(255, 255, 255, 0);
-    box-shadow: 0px 0px 0px #e97c74;
+    -webkit-box-shadow: 0px 0px 0px #e97c74;
+            box-shadow: 0px 0px 0px #e97c74;
   }
 }
+
 @-webkit-keyframes shuffleFade {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   10% {
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   90% {
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   100% {
     opacity: 0;
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
+
 @keyframes shuffleFade {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   10% {
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   90% {
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   100% {
     opacity: 0;
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
