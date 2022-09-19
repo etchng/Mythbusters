@@ -131,7 +131,9 @@ transition-property: background-image;
   right: 0;
   height: 30vh;
   width: 80%;
-  background: rgba(0, 0, 0, 0.15);
+  // background: rgba(47, 80, 141, 0.35);
+  background: linear-gradient(180deg, rgba(47, 80, 141, 0.35) 0%, rgba(47, 80, 141, 0) 100%);
+backdrop-filter: blur(6px);
   position: absolute;
   bottom: 15vh;
   margin-bottom: 3rem;
@@ -150,7 +152,7 @@ transition-property: background-image;
     padding: 1rem 2rem;
     text-align: left;
     line-height: 2.5rem;
-    border-left: 2px solid rgba(255, 255, 255, 0.25);
+    border-left: 3px solid #c83745;
 
     animation: shuffleFade 12s ease infinite;
   }
